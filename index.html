@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubre Jean Paul Gaultier Le Male Elixir en Perfumes Bogotá. Visualízalo en 3D y realidad aumentada antes de comprar.">
+  <meta name="theme-color" content="#11100e">
+
+  <meta property="og:title" content="Jean Paul Gaultier Le Male Elixir | Perfumes Bogotá">
+  <meta property="og:description" content="Fragancia Ámbar Fougère de 125 ml. Visualízala en realidad aumentada desde tu celular.">
+  <meta property="og:type" content="product">
+
+  <title>Perfumes Bogotá | Jean Paul Gaultier Le Male Elixir WebAR</title>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B8%3C/text%3E%3C/svg%3E">
+
+  <script
+    type="module"
+    src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js">
+  </script>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+    defer>
+  </script>
+
+  <!-- Datos estructurados para SEO / rich snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "Jean Paul Gaultier Le Male Elixir",
+    "description": "Eau de Parfum Ámbar Fougère para hombre, 125 ml. Creado por el perfumista Quentin Bisch, lanzado en 2023.",
+    "brand": { "@type": "Brand", "name": "Jean Paul Gaultier" },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "COP",
+      "price": "380000",
+      "availability": "https://schema.org/InStock",
+      "url": "URL_DEL_PRODUCTO_PERFUMES_BOGOTA"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --color-principal: #11100e;
+      --color-secundario: #f5f0e6;
+      --color-gris: #ded8cc;
+      --color-promocion: #8a6208;
+      --color-dorado: #d4af37;
+      --radio-base: 18px;
+      --transicion: 0.2s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: var(--color-secundario);
+      color: var(--color-principal);
+      line-height: 1.6;
+    }
+
+    a, button {
+      font-family: inherit;
+    }
+
+    /* Foco visible para navegación por teclado */
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--color-dorado);
+      outline-offset: 3px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0d0d0c, #2a2115);
+      color: var(--color-secundario);
+      padding: 25px 20px;
+      text-align: center;
+      border-bottom: 3px solid var(--color-dorado);
+    }
+
+    header h1 {
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      letter-spacing: 3px;
+      color: var(--color-dorado);
+    }
+
+    header p {
+      margin-top: 5px;
+    }
+
+    main {
+      width: min(1100px, 92%);
+      margin: 35px auto;
+    }
+
+    .producto {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .visor {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      max-height: 500px;
+      background: linear-gradient(145deg, #191713, #3b2d1b);
+      border-radius: var(--radio-base);
+      overflow: hidden;
+      border: 1px solid #9b7a28;
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      --poster-color: transparent;
+    }
+
+    /* Mensaje de error si el modelo 3D no carga */
+    .visor-error {
+      display: none;
+      position: absolute;
+      inset: 0;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      color: var(--color-secundario);
+      background: rgba(17, 16, 14, 0.92);
+    }
+
+    .visor.tiene-error .visor-error {
+      display: flex;
+    }
+
+    .ar-button {
+      position: absolute;
+      left: 50%;
+      bottom: 20px;
+      transform: translateX(-50%);
+      border: 2px solid var(--color-dorado);
+      border-radius: 30px;
+      padding: 14px 24px;
+      background-color: #11100e;
+      color: #f5f0e6;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: opacity var(--transicion);
+    }
+
+    .ar-button:hover {
+      opacity: 0.85;
+    }
+
+    .informacion h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+      margin-bottom: 15px;
+      color: #241b10;
+    }
+
+    .descripcion {
+      font-size: 1.05rem;
+      margin-bottom: 20px;
+    }
+
+    .beneficios {
+      margin: 20px 0;
+      padding-left: 22px;
+    }
+
+    .beneficios li {
+      margin-bottom: 8px;
+    }
+
+    .precios {
+      margin-top: 10px;
+    }
+
+    .precio-anterior {
+      color: #666666;
+      font-size: 1.1rem;
+      text-decoration: line-through;
+    }
+
+    .precio-actual {
+      color: var(--color-promocion);
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .ahorro {
+      color: #5b4610;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    .cta {
+      display: inline-block;
+      background: linear-gradient(135deg, #11100e, #3b2d1b);
+      color: #f5f0e6;
+      padding: 15px 28px;
+      border: 2px solid var(--color-dorado);
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: opacity var(--transicion);
+    }
+
+    .cta:hover {
+      opacity: 0.8;
+    }
+
+    .qr-section {
+      margin-top: 45px;
+      padding: 30px;
+      background-color: var(--color-gris);
+      border-radius: var(--radio-base);
+      text-align: center;
+      border-top: 3px solid var(--color-dorado);
+    }
+
+    #qrCode {
+      display: flex;
+      justify-content: center;
+      margin: 20px auto;
+      min-height: 180px;
+    }
+
+    #qrCode img {
+      border-radius: 8px;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 25px;
+      background-color: #11100e;
+      color: #f5f0e6;
+      text-align: center;
+      border-top: 3px solid var(--color-dorado);
+    }
+
+    @media (max-width: 800px) {
+      .producto {
+        grid-template-columns: 1fr;
+      }
+
+      .visor {
+        aspect-ratio: 1 / 1;
+        max-height: 400px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ar-button,
+      .cta {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>PERFUMES BOGOTÁ</h1>
+    <p>Descubre Jean Paul Gaultier Le Male Elixir en WebAR</p>
+  </header>
+
+  <main>
+
+    <section class="producto" aria-labelledby="titulo-producto">
+
+      <div class="visor" id="visor">
+
+        <model-viewer
+          id="modeloPerfume"
+          src="modelo.glb"
+          alt="Modelo tridimensional del perfume Jean Paul Gaultier Le Male Elixir"
+          ar
+          ar-modes="webxr scene-viewer quick-look"
+          ar-placement="floor"
+          ar-scale="auto"
+          camera-controls
+          auto-rotate
+          shadow-intensity="1.2"
+          exposure="1"
+          loading="eager"
+          reveal="auto"
+          touch-action="pan-y">
+
+          <button class="ar-button" slot="ar-button" type="button">
+            Ver en mi espacio
+          </button>
+
+          <div slot="progress-bar"></div>
+
+        </model-viewer>
+
+        <div class="visor-error" id="visorError" role="alert">
+          <p>No pudimos cargar el modelo 3D. Escribe a Perfumes Bogotá o intenta de nuevo más tarde.</p>
+        </div>
+
+      </div>
+
+      <div class="informacion">
+
+        <h2 id="titulo-producto">Jean Paul Gaultier Le Male Elixir</h2>
+
+        <p class="descripcion">
+          Le Male Elixir de Jean Paul Gaultier es una fragancia de la familia
+          olfativa Ámbar Fougère para hombres. Una propuesta intensa y
+          sofisticada, presentada en Eau de Parfum de 125 ml.
+        </p>
+
+        <ul class="beneficios">
+          <li>Fragancia Ámbar Fougère para hombres.</li>
+          <li>Lanzada en 2023.</li>
+          <li>Creada por el perfumista Quentin Bisch.</li>
+          <li>Notas de salida: lavanda y menta.</li>
+          <li>Notas de corazón: vainilla y benjuí.</li>
+          <li>Notas de fondo: miel, haba tonka y tabaco.</li>
+        </ul>
+
+        <div class="precios" id="precios" data-antes="454990" data-ahora="380000">
+          <p class="precio-anterior" id="precioAnterior"></p>
+          <p class="precio-actual" id="precioActual"></p>
+          <p class="ahorro" id="ahorro"></p>
+        </div>
+
+        <a
+          class="cta"
+          href="URL_DEL_PRODUCTO_PERFUMES_BOGOTA"
+          target="_blank"
+          rel="noopener noreferrer">
+          Comprar ahora
+        </a>
+
+      </div>
+
+    </section>
+
+    <section class="qr-section" aria-labelledby="titulo-qr">
+
+      <h2 id="titulo-qr">Explora Le Male Elixir desde tu celular</h2>
+
+      <p>
+        Escanea el código QR para abrir la experiencia y visualizar el perfume
+        en realidad aumentada desde un dispositivo compatible.
+      </p>
+
+      <div id="qrCode" role="img" aria-label="Código QR para abrir esta página en tu celular"></div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Perfumes Bogotá · Experiencia comercial WebAR</p>
+  </footer>
+
+  <script>
+    // Formatea precios en pesos colombianos y calcula el ahorro
+    // automáticamente a partir de data-antes / data-ahora, para que
+    // nunca queden desincronizados si cambian los valores.
+    (function precios() {
+      const contenedor = document.getElementById('precios');
+      const antes = Number(contenedor.dataset.antes);
+      const ahora = Number(contenedor.dataset.ahora);
+      const formato = new Intl.NumberFormat('es-CO', {
+        style: 'currency',
+        currency: 'COP',
+        maximumFractionDigits: 0
+      });
+
+      document.getElementById('precioAnterior').textContent = `Antes: ${formato.format(antes)}`;
+      document.getElementById('precioActual').textContent = `Hoy: ${formato.format(ahora)}`;
+
+      if (antes > ahora) {
+        const ahorro = antes - ahora;
+        const porcentaje = Math.round((ahorro / antes) * 100);
+        document.getElementById('ahorro').textContent =
+          `¡Ahorra ${formato.format(ahorro)} (${porcentaje}%)!`;
+      }
+    })();
+
+    // Muestra un mensaje si el modelo 3D falla al cargar, en vez de
+    // dejar el visor en blanco.
+    document.getElementById('modeloPerfume').addEventListener('error', () => {
+      document.getElementById('visor').classList.add('tiene-error');
+    });
+
+    // Genera el QR apuntando a esta misma página. Se ejecuta cuando
+    // el script de qrcodejs (cargado con defer) ya está disponible.
+    window.addEventListener('load', () => {
+      if (typeof QRCode === 'undefined') {
+        document.getElementById('qrCode').textContent =
+          'No se pudo generar el código QR. Copia el enlace de esta página.';
+        return;
+      }
+      new QRCode(document.getElementById('qrCode'), {
+        text: window.location.href,
+        width: 180,
+        height: 180,
+        correctLevel: QRCode.CorrectLevel.H
+      });
+    });
+
+    // Recordatorio en consola para el equipo: hay dos placeholders
+    // que deben reemplazarse antes de publicar (enlace del producto).
+    if (document.querySelector('.cta').href.includes('URL_DEL_PRODUCTO_PERFUMES_BOGOTA')) {
+      console.warn('Perfumes Bogotá: reemplaza URL_DEL_PRODUCTO_PERFUMES_BOGOTA por el enlace real del producto (hay 2 lugares: el botón "Comprar ahora" y el JSON-LD).');
+    }
+  </script>
+
+</body>
+</html>
